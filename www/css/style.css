@@ -1,9 +1,11 @@
-/**/
+/* */
 
-.CaixaCam {
+img {
   margin-left: 5%;
   margin-right: 5%;
-  width: 90%;
-  height: 100px;
-  border: 1px solid blue; 
+  border-radius: 5px;
+}
+
+#produto-txt-1, #produto-txt-2, #produto-txt-3, #produto-txt-4, #produto-txt-5, #produto-txt-6, #produto-txt-7, #produto-txt-8, #produto-txt-9 {
+  font-size: 16px;
 }

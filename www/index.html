@@ -18,11 +18,8 @@
   <!-- JQuery -->
   <script src="js/jquery.js"></script>
   <!-- Código de barras -->
-  <script src="js/barCodeApi.js"></script>
-  <!-- Código de barras Config -->
-  <script src="js/barCodeConfig.js"></script>
-  <!-- Produtos cadastrados -->
   <script src="js/produtos.js"></script>
+
 </head>
 <body>
   <div id="app">
@@ -38,7 +35,7 @@
             </div>
           </div>
           <div class="page-content">
-            <div class="block">&#x24B8; 2019 <b>João Araya, Erick Góes</b></div>
+            <div class="block">2019 <b>João Araya, Erick Góes</b></div>
           </div>
         </div>
       </div>
@@ -67,23 +64,14 @@
           <div class="block block-strong">
             <p style="text-align:center; font-size:18px;">Leitura de <b>Código De Barras</b></p>
           </div>
-
-          <!-- Caixa da Câmera -->
-          <div class="CaixaCam">
-            <div id="barcode">
-              <video id="barcodevideo" autoplay></video>
-              <canvas id="barcodecanvasg" ></canvas>
-            </div>
-            <canvas id="barcodecanvas" ></canvas>
-            <div id="result"></div>
-          </div>
+        
+          <!-- Icone -->
+          <img src="img/scan.png"  width="90%">
 
           <!-- Botão -->
           <div class="block block-strong">
             <div class="row">
-              <div class="col-50">
-                <a style="margin: 0; width: 340px;" href="#" class="button button-raised button-fill popup-open" onclick="acao()" data-popup="#my-popup">CHECAR</a>
-              </div>
+                <input data-popup="#my-popup" href="#" class="button button-raised button-fill popup-open" type="button" onClick ="scanBarcode()" value ="Scan" />
             </div>
           </div>
 
@@ -100,30 +88,31 @@
             </div>
           </div>
           <div class="page-content">
+            <div class="block block-strong">
+              <p style="text-align:center; font-size:18px;" id="scan-titulo">PRODUTO NÃO ENCONTRADO</b></p>
+            </div>
             <div class="block">
-              <p>Produto:</p>
-                <br>
-                <img id="produto-img-1" src="img\produto3.png" style="width:100%">
-                <br>
-                <br>
-                <span id="produto-txt-1">Nome do produto:</span>
-                <br>
-                <span id="produto-txt-2">Valor:</span>
-                <br>
-                <span id="produto-txt-3">Cor:</span>
-                <br>
-                <span id="produto-txt-4">S.O:</span>
-                <br>
-                <span id="produto-txt-5">Processador:</span>
-                <br>
-                <span id="produto-txt-6">Memoria Interna:</span>
-                <br>
-                <span id="produto-txt-7">Memoria Ram:</span>
-                <br>
-                <span id="produto-txt-8">Tela:</span>
-                <br>
-                <span id="produto-txt-9">Camera:</span>
-                <br>
+              <img id="produto-img-1" src="img\notfound.png" style="width:90%">
+              <br>
+              <br>
+              <span id="produto-txt-1"></span>
+              <br>
+              <span id="produto-txt-2"></span>
+              <br>
+              <span id="produto-txt-3"></span>
+              <br>
+              <span id="produto-txt-4"></span>
+              <br>
+              <span id="produto-txt-5"></span>
+              <br>
+              <span id="produto-txt-6"></span>
+              <br>
+              <span id="produto-txt-7"></span>
+              <br>
+              <span id="produto-txt-8"></span>
+              <br>
+              <span id="produto-txt-9"></span>
+              <br>
             </div>
           </div>
         </div>
