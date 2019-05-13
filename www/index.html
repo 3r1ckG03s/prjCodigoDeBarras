@@ -15,33 +15,38 @@
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- JQuery -->
+  <script src="js/jquery.js"></script>
+  <!-- Código de barras -->
+  <script src="js/produtos.js"></script>
+
 </head>
 <body>
   <div id="app">
     <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar"></div>
-    <!-- Left panel with cover effect-->
+    <!-- Menu Hamburguer -->
     <div class="panel panel-left panel-cover theme-dark">
       <div class="view">
         <div class="page">
           <div class="navbar">
             <div class="navbar-inner">
-              <div class="title">Opções</div>
+              <div class="title">Sobre</div>
             </div>
           </div>
           <div class="page-content">
-            <div class="block">Opções</div>
+            <div class="block">2019 <b>João Araya, Erick Góes</b></div>
           </div>
         </div>
       </div>
     </div>
     
-
     <!-- Your main view, should have "view-main" class -->
     <div class="view view-main ios-edges">
       <!-- Page, data-name contains page name which can be used in callbacks -->
       <div class="page" data-name="home">
-        <!-- Top Navbar -->
+
+        <!-- Navbar -->
         <div class="navbar">
           <div class="navbar-inner">
             <div class="left">
@@ -54,111 +59,60 @@
           </div>
         </div>
 
-        <!-- Toolbar
-        <div class="toolbar">
-          <div class="toolbar-inner">
-            <a href="#" class="link">Left Link</a>
-          </div>
-        </div> -->
-
-        <!-- Scrollable page content-->
+        <!-- Título -->
         <div class="page-content">
           <div class="block block-strong">
-            <p style="text-align:center; font-size:18px;">Leitura de <b>Codigo De Barras</b></p>
+            <p style="text-align:center; font-size:18px;">Leitura de <b>Código De Barras</b></p>
           </div>
-
-          <!--Caixa da camera-->
-          <div class="CaixaCam">
-            
-          </div>
-
         
+          <!-- Icone -->
+          <img src="img/scan.png"  width="90%">
+
+          <!-- Botão -->
           <div class="block block-strong">
             <div class="row">
-              <div class="col-50">
-                <a style="margin: 0; width: 340px;" href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">CAPTURAR</a>
-              </div>
+                <input data-popup="#my-popup" href="#" class="button button-raised button-fill popup-open" type="button" onClick ="scanBarcode()" value ="Scan" />
             </div>
           </div>
 
-    <!-- Popup -->
+    <!-- Popup (Página do Botão) -->
     <div class="popup" id="my-popup">
       <div class="view">
         <div class="page">
           <div class="navbar">
             <div class="navbar-inner">
-              <div class="title">Popup</div>
+              <div class="title">BarCode</div>
               <div class="right">
-                <a href="#" class="link popup-close">Close</a>
+                <a href="#" class="link popup-close">Voltar</a>
               </div>
             </div>
           </div>
           <div class="page-content">
+            <div class="block block-strong">
+              <p style="text-align:center; font-size:18px;" id="scan-titulo">PRODUTO NÃO ENCONTRADO</b></p>
+            </div>
             <div class="block">
-              <p>Produto:</p>
-                <span id="ms-text-1">Nome do produto:</span>
-                <br>
-                <img id="ms-produto-1" src="img\Produto.jpg" style="width:100%">
-                <br>
-                <span id="ms-text-2">Valor:</span>
-                <br>
-                <span id="ms-text-4">Cor:</span>
-                <br>
-                <span id="ms-text-3">Sistema Operacional:</span>
-                <br>
-                <span id="ms-text-4">Processador:</span>
-                <br>
-                <span id="ms-text-4">Memoria Interna:</span>
-                 <br>
-                <span id="ms-text-4">Memoria ram:</span>
-                <br>
-                <span id="ms-text-4">Tela:</span>
-                <br>
-                <span id="ms-text-4">Camera:</span>
-                
- 
- 
- 
- 
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Login Screen -->
-    <div class="login-screen" id="my-login-screen">
-      <div class="view">
-        <div class="page">
-          <div class="page-content login-screen-content">
-            <div class="login-screen-title">Login</div>
-            <div class="list">
-              <ul>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title item-label">Username</div>
-                    <div class="item-input-wrap">
-                      <input type="text" name="username" placeholder="Your username">
-                    </div>
-                  </div>
-                </li>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title item-label">Password</div>
-                    <div class="item-input-wrap">
-                      <input type="password" name="password" placeholder="Your password">
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="list">
-              <ul>
-                <li>
-                  <a href="#" class="item-link list-button login-button">Sign In</a>
-                </li>
-              </ul>
-              <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
+              <img id="produto-img-1" src="img\notfound.png" style="width:90%">
+              <br>
+              <br>
+              <span id="produto-txt-1"></span>
+              <br>
+              <span id="produto-txt-2"></span>
+              <br>
+              <span id="produto-txt-3"></span>
+              <br>
+              <span id="produto-txt-4"></span>
+              <br>
+              <span id="produto-txt-5"></span>
+              <br>
+              <span id="produto-txt-6"></span>
+              <br>
+              <span id="produto-txt-7"></span>
+              <br>
+              <span id="produto-txt-8"></span>
+              <br>
+              <span id="produto-txt-9"></span>
+              <br>
             </div>
           </div>
         </div>

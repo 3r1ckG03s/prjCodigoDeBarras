@@ -184,7 +184,7 @@ p {
   color: #4caf50;
 }
 .md .color-theme-blue a {
-  color: #c02626;
+  color: #2196f3;
 }
 .md .color-theme-pink a {
   color: #e91e63;
@@ -211,7 +211,7 @@ p {
   color: #4caf50;
 }
 .md a.color-blue {
-  color: #c02626;
+  color: #2196f3;
 }
 .md a.color-pink {
   color: #e91e63;
@@ -276,7 +276,7 @@ html.with-statusbar.device-iphone-x .framework7-root {
   background-color: #1b1b1b;
 }
 .md .statusbar {
-  background: #c02626;
+  background: #0a6ebd;
 }
 .md .color-theme-red .statusbar {
   background: #d2190b;
@@ -285,7 +285,7 @@ html.with-statusbar.device-iphone-x .framework7-root {
   background: #357a38;
 }
 .md .color-theme-blue .statusbar {
-  background: #c02626;
+  background: #0a6ebd;
 }
 .md .color-theme-pink .statusbar {
   background: #aa1145;
@@ -1341,7 +1341,7 @@ html.with-statusbar.device-iphone-x .framework7-root {
   background: #4caf50;
 }
 .md .navbar.color-blue {
-  background: #c02626;
+  background: #2196f3;
 }
 .md .navbar.color-pink {
   background: #e91e63;
